@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="नेपालीहरूलाई सत्य र तथ्यका आधारमा जागरूक बनाउने डिजिटल मञ्च।">
+<title>Nepal Facts & Truths — सत्य र तथ्यमा आधारित जागरण</title>
+<link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Nepali:ital@0;1&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --red:#B91C1C;--red-dark:#7F1D1D;--red-light:#FEF2F2;
+  --gold:#D97706;
+  --ink:#111827;--ink2:#374151;--muted:#6B7280;
+  --border:#E5E7EB;--bg:#F9FAFB;--white:#FFFFFF;--ad:#F3F4F6;
+  --tag-nepal-bg:#FEF2F2;--tag-nepal:#991B1B;
+  --tag-world-bg:#EFF6FF;--tag-world:#1D4ED8;
+  --tag-tech-bg:#F0FDF4;--tag-tech:#166534;
+}
+body{font-family:'Noto Sans Devanagari',sans-serif;background:var(--bg);color:var(--ink);font-size:15px;line-height:1.7}
+a{text-decoration:none;color:inherit}
+img{display:block}
+
+.topbar{background:var(--red-dark);color:#FCA5A5;font-size:11.5px;padding:7px 0}
+.topbar-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center}
+.topbar-right{display:flex;gap:14px}
+.topbar-right a{color:#FCA5A5;font-size:11px;font-weight:500;font-family:'DM Sans',sans-serif;transition:color .2s}
+.topbar-right a:hover{color:#fff}
+
+header{background:var(--white);border-bottom:3px solid var(--red)}
+.header-inner{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand-name{font-family:'Playfair Display',serif;font-size:34px;font-weight:900;line-height:1;letter-spacing:-0.5px}
+.brand-name .nepal{color:var(--red)}
+.brand-name .rest{color:var(--ink)}
+.brand-sub{font-size:10.5px;color:var(--muted);letter-spacing:0.16em;text-transform:uppercase;margin-top:4px;font-weight:600;font-family:'DM Sans',sans-serif}
+.header-ad{background:var(--ad);border:1px dashed #D1D5DB;width:420px;height:64px;display:flex;align-items:center;justify-content:center;border-radius:6px}
+.header-ad span{font-size:10px;color:#9CA3AF;letter-spacing:0.1em;text-transform:uppercase;font-family:'DM Sans',sans-serif}
+.header-right{display:flex;gap:10px;align-items:center}
+.search-box{display:flex;align-items:center;gap:8px;background:var(--bg);border:1px solid var(--border);border-radius:24px;padding:8px 16px;width:180px}
+.search-box input{border:none;background:transparent;font-size:13px;color:var(--ink);outline:none;width:100%;font-family:'Noto Sans Devanagari',sans-serif}
+.search-box input::placeholder{color:var(--muted)}
+
+nav{background:var(--ink);position:sticky;top:0;z-index:99}
+.nav-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center}
+.nav-link{font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#9CA3AF;padding:13px 18px;border-bottom:3px solid transparent;white-space:nowrap;transition:all .2s;cursor:pointer}
+.nav-link:hover{color:#fff}
+.nav-link.active{color:#fff;border-bottom-color:var(--red)}
+
+.mission-bar{background:var(--red-light);border-bottom:1px solid #FECACA;padding:10px 0}
+.mission-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:12px}
+.mission-text{font-size:13px;color:var(--red-dark);font-weight:500}
+.mission-text strong{font-weight:700}
+
+.page{max-width:1100px;margin:0 auto;padding:32px 24px}
+
+.hero{display:grid;grid-template-columns:1.6fr 1fr;gap:0;border-radius:14px;overflow:hidden;margin-bottom:32px;border:1px solid var(--border)}
+.hero-img-wrap{position:relative;background:#1a0a0a;cursor:pointer;overflow:hidden}
+.hero-img-wrap img{width:100%;height:420px;object-fit:cover;opacity:0.5;transition:opacity .4s}
+.hero-img-wrap:hover img{opacity:0.38}
+.hero-body{position:absolute;bottom:0;left:0;right:0;padding:32px;background:linear-gradient(to top,rgba(0,0,0,0.9) 0%,transparent 100%)}
+.hero-pill{display:inline-flex;align-items:center;gap:6px;background:var(--red);color:#fff;font-size:10px;font-weight:700;padding:4px 12px;border-radius:20px;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:14px;font-family:'DM Sans',sans-serif}
+.hero-title{font-family:'Tiro Devanagari Nepali',serif;font-size:26px;color:#fff;line-height:1.4;margin-bottom:10px}
+.hero-desc{font-size:13.5px;color:#FCA5A5;line-height:1.7;margin-bottom:14px}
+.hero-meta{font-size:12px;color:#FCA5A5;display:flex;align-items:center;gap:8px;font-family:'DM Sans',sans-serif}
+.dot{width:3px;height:3px;border-radius:50%;background:#FCA5A5;display:inline-block}
+.read-btn{display:inline-flex;align-items:center;gap:6px;background:var(--red);color:#fff;font-size:13px;font-weight:600;padding:10px 22px;border-radius:24px;margin-top:14px;cursor:pointer;border:none;font-family:'DM Sans',sans-serif;transition:background .2s}
+.read-btn:hover{background:var(--red-dark)}
+
+.hero-sidebar{background:var(--white);padding:24px;display:flex;flex-direction:column}
+.hs-label{font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid var(--red)}
+.hs-topic{padding:16px 0;border-bottom:1px solid var(--border);cursor:pointer;transition:all .2s}
+.hs-topic:last-child{border-bottom:none;padding-bottom:0}
+.hs-topic:hover{padding-left:5px}
+.hs-tag{font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:3px 10px;border-radius:20px;display:inline-block;margin-bottom:8px;font-family:'DM Sans',sans-serif}
+.hs-title{font-family:'Tiro Devanagari Nepali',serif;font-size:17px;color:var(--ink);line-height:1.45;margin-bottom:6px;transition:color .2s}
+.hs-topic:hover .hs-title{color:var(--red)}
+.hs-meta{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:6px;font-family:'DM Sans',sans-serif}
+
+.ad-banner{background:var(--ad);border:1px dashed #D1D5DB;height:88px;display:flex;align-items:center;justify-content:center;border-radius:8px;margin-bottom:36px}
+.ad-banner span{font-size:10px;color:#9CA3AF;letter-spacing:0.1em;text-transform:uppercase;font-family:'DM Sans',sans-serif}
+
+.main-grid{display:grid;grid-template-columns:1fr 280px;gap:28px;margin-bottom:32px}
+
+.section-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--red)}
+.section-hd h2{font-family:'DM Sans',sans-serif;font-size:17px;font-weight:700;color:var(--ink);text-transform:uppercase;letter-spacing:0.06em;display:flex;align-items:center;gap:8px}
+.section-count{font-size:12px;color:var(--muted);background:var(--bg);border:1px solid var(--border);padding:3px 10px;border-radius:20px;font-family:'DM Sans',sans-serif;font-weight:400;text-transform:none;letter-spacing:0}
+
+.big-topic{background:var(--white);border:1px solid var(--border);border-radius:14px;overflow:hidden;cursor:pointer;transition:all .2s;margin-bottom:16px;display:block}
+.big-topic:hover{border-color:#FCA5A5;transform:translateY(-1px)}
+.big-topic-inner{display:flex}
+.big-topic-img{width:260px;height:190px;object-fit:cover;flex-shrink:0;background:#ddd}
+.big-topic-body{padding:22px 26px;display:flex;flex-direction:column;justify-content:space-between;flex:1}
+.bt-tag{font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:4px 12px;border-radius:20px;display:inline-block;margin-bottom:10px;font-family:'DM Sans',sans-serif}
+.bt-title{font-family:'Tiro Devanagari Nepali',serif;font-size:20px;color:var(--ink);line-height:1.4;margin-bottom:9px;transition:color .2s}
+.big-topic:hover .bt-title{color:var(--red)}
+.bt-desc{font-size:13.5px;color:var(--muted);line-height:1.7;margin-bottom:14px}
+.bt-footer{display:flex;align-items:center;justify-content:space-between}
+.reading-badge{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;background:var(--red-light);color:var(--red-dark);padding:4px 12px;border-radius:20px;font-family:'DM Sans',sans-serif}
+.bt-read{font-size:13px;font-weight:600;color:var(--red);font-family:'DM Sans',sans-serif}
+
+.sidebar-ad{background:var(--ad);border:1px dashed #D1D5DB;height:250px;display:flex;align-items:center;justify-content:center;border-radius:8px;margin-bottom:20px}
+.sidebar-ad span{font-size:10px;color:#9CA3AF;letter-spacing:0.1em;text-transform:uppercase;font-family:'DM Sans',sans-serif}
+.sidebar-box{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:18px;margin-bottom:20px}
+.sb-title{font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;color:var(--ink);margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--border);text-transform:uppercase;letter-spacing:0.06em}
+.sb-stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.sb-stat{background:var(--red-light);border-radius:8px;padding:12px;text-align:center}
+.sb-stat-val{font-family:'DM Sans',sans-serif;font-size:22px;font-weight:700;color:var(--red)}
+.sb-stat-lbl{font-size:11px;color:var(--red-dark);margin-top:2px;font-family:'DM Sans',sans-serif}
+
+.about-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:20px}
+.about-card-title{font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;color:var(--ink);margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--border);text-transform:uppercase;letter-spacing:0.06em}
+.about-card-text{font-size:13px;color:var(--muted);line-height:1.75}
+.about-card-text strong{color:var(--red-dark);font-weight:600}
+
+.newsletter-card{background:var(--red-dark);border-radius:12px;padding:20px;margin-top:16px}
+.nl-title{font-family:'Tiro Devanagari Nepali',serif;font-size:20px;color:#fff;margin-bottom:6px}
+.nl-desc{font-size:13px;color:#FCA5A5;line-height:1.65;margin-bottom:16px}
+.nl-input{width:100%;padding:9px 14px;border:none;border-radius:8px;font-size:13px;font-family:'DM Sans',sans-serif;outline:none;margin-bottom:8px}
+.nl-btn{width:100%;background:var(--gold);color:#fff;border:none;padding:10px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif}
+.nl-btn:hover{opacity:.88}
+
+footer{background:#1a0505;color:#6B7280;padding:32px 0 16px;margin-top:16px}
+.footer-inner{max-width:1100px;margin:0 auto;padding:0 24px}
+.footer-top{display:flex;align-items:flex-start;justify-content:space-between;gap:32px;margin-bottom:24px;flex-wrap:wrap}
+.f-brand-name{font-family:'Playfair Display',serif;font-size:22px;font-weight:900;margin-bottom:8px}
+.f-brand-name .nepal{color:var(--red)}
+.f-brand-name .rest{color:#fff}
+.f-desc{font-size:12.5px;color:#4B5563;line-height:1.75;max-width:280px}
+.f-mission{font-size:12px;color:var(--red);font-style:italic;margin-top:8px;font-weight:600}
+.f-col h4{font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#9CA3AF;margin-bottom:12px}
+.f-col a{display:block;font-size:13px;color:#4B5563;margin-bottom:8px;transition:color .2s}
+.f-col a:hover{color:var(--red)}
+.footer-bottom{border-top:1px solid #2a0a0a;padding-top:14px;display:flex;justify-content:space-between;font-size:12px;flex-wrap:wrap;gap:8px;font-family:'DM Sans',sans-serif;color:#374151}
+
+@media(max-width:860px){
+  .hero{grid-template-columns:1fr}
+  .hero-img-wrap img{height:260px}
+  .big-topic-inner{flex-direction:column}
+  .big-topic-img{width:100%;height:180px}
+  .main-grid{grid-template-columns:1fr}
+  .header-ad{display:none}
+  .footer-top{flex-direction:column}
+}
+@media(max-width:540px){
+  .brand-name{font-size:24px}
+  .hero-title{font-size:20px}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <span style="font-family:'DM Sans',sans-serif" id="today-date"></span>
+    <div class="topbar-right">
+      <a href="#">नेपाली</a>
+      <a href="#">EN</a>
+    </div>
+  </div>
+</div>
+
+<header>
+  <div class="header-inner">
+    <div>
+      <div class="brand-name"><span class="nepal">Nepal </span><span class="rest">Facts & Truths</span></div>
+      <div class="brand-sub">सत्य र तथ्यमा आधारित जागरण</div>
+    </div>
+    <!-- REPLACE THIS WITH YOUR GOOGLE ADSENSE CODE -->
+    <div class="header-ad"><span>728 × 90 — Ad Space</span></div>
+    <div class="header-right">
+      <div class="search-box">
+        <span style="color:var(--muted);font-size:14px">🔍</span>
+        <input type="text" placeholder="विषय खोज्नुहोस्...">
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-link active">गृहपृष्ठ</div>
+    <a href="#" class="nav-link">🇳🇵 नेपाल</a>
+    <a href="#" class="nav-link">🌍 विश्व</a>
+    <a href="#" class="nav-link">💻 प्रविधि</a>
+  </div>
+</nav>
+
+<div class="mission-bar">
+  <div class="mission-inner">
+    <span class="mission-text">🎯 <strong>उद्देश्य:</strong> नेपालीहरूलाई सत्य र तथ्यका आधारमा जागरूक बनाउनु — सही जानकारी, सरल भाषामा।</span>
+  </div>
+</div>
+
+<div class="page">
+
+  <div class="hero">
+    <div class="hero-img-wrap">
+      <!-- REPLACE src WITH YOUR OWN IMAGE -->
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=80" alt="एआई चिप">
+      <div class="hero-body">
+        <div class="hero-pill">🔥 विशेष विषय</div>
+        <!-- REPLACE WITH YOUR ARTICLE TITLE -->
+        <div class="hero-title">एआई चिप युद्ध के हो — र नेपाललाई किन फरक पर्छ?</div>
+        <div class="hero-desc">अमेरिका र चीनबीच विश्वको सबैभन्दा शक्तिशाली कम्प्युटर चिपमाथिको नियन्त्रणका लागि तीव्र प्रतिस्पर्धा — तथ्यहरू के भन्छन्?</div>
+        <div class="hero-meta">
+          <span>प्रविधि</span><span class="dot"></span>
+          <span>८ मिनेट पढाइ</span><span class="dot"></span>
+          <span>आज अपडेट</span>
+        </div>
+        <!-- REPLACE href WITH YOUR ARTICLE PAGE -->
+        <a href="article.html"><button class="read-btn">पूरा पढ्नुहोस् →</button></a>
+      </div>
+    </div>
+    <div class="hero-sidebar">
+      <div class="hs-label">अझै पढ्नुहोस्</div>
+      <a href="article.html">
+        <div class="hs-topic">
+          <span class="hs-tag" style="background:var(--tag-nepal-bg);color:var(--tag-nepal)">नेपाल</span>
+          <div class="hs-title">नेपालको जलविद्युत उछाल: शून्यबाट ४२ अर्बसम्म — के साँचो हो?</div>
+          <div class="hs-meta"><span>५ मिनेट</span><span class="dot" style="background:var(--muted)"></span><span>आज अपडेट</span></div>
+        </div>
+      </a>
+      <a href="article.html">
+        <div class="hs-topic">
+          <span class="hs-tag" style="background:var(--tag-world-bg);color:var(--tag-world)">विश्व</span>
+          <div class="hs-title">संयुक्त राष्ट्रसंघको जलवायु मतदान: साना राष्ट्रका लागि के अर्थ राख्छ?</div>
+          <div class="hs-meta"><span>६ मिनेट</span><span class="dot" style="background:var(--muted)"></span><span>आज अपडेट</span></div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- REPLACE WITH YOUR GOOGLE ADSENSE CODE -->
+  <div class="ad-banner"><span>Leaderboard Ad — 728 × 90</span></div>
+
+  <div class="main-grid">
+    <div>
+      <div class="section-hd">
+        <h2>सबै विषयहरू <span class="section-count">३ उपलब्ध</span></h2>
+      </div>
+
+      <!-- ARTICLE 1 — REPLACE CONTENT WITH YOUR OWN -->
+      <a href="article.html" class="big-topic">
+        <div class="big-topic-inner">
+          <img class="big-topic-img" src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&q=80" alt="">
+          <div class="big-topic-body">
+            <div>
+              <span class="bt-tag" style="background:var(--tag-tech-bg);color:var(--tag-tech)">प्रविधि</span>
+              <div class="bt-title">एआई चिप युद्ध के हो — र नेपाललाई किन फरक पर्छ?</div>
+              <div class="bt-desc">संसारको सबैभन्दा शक्तिशाली कम्प्युटर चिपमाथि अमेरिका र चीनबीच तीव्र प्रतिस्पर्धा छ — तथ्यमा आधारित सरल विश्लेषण।</div>
+            </div>
+            <div class="bt-footer">
+              <span class="reading-badge">📖 ८ मिनेट पढाइ</span>
+              <span class="bt-read">पढ्नुहोस् →</span>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- ARTICLE 2 -->
+      <a href="article.html" class="big-topic">
+        <div class="big-topic-inner">
+          <img class="big-topic-img" src="https://images.unsplash.com/photo-1570041475928-4483b26eb1ae?w=500&q=80" alt="">
+          <div class="big-topic-body">
+            <div>
+              <span class="bt-tag" style="background:var(--tag-nepal-bg);color:var(--tag-nepal)">नेपाल</span>
+              <div class="bt-title">नेपालको जलविद्युत उछाल: तथ्य के हो, कथा के हो?</div>
+              <div class="bt-desc">पाँच वर्षमा नेपाल बिजुली आयात गर्नेबाट अर्बौं रुपैयाँको निर्यात गर्नेमा परिणत भयो — तर यसपछाडिको सम्पूर्ण सत्य के हो?</div>
+            </div>
+            <div class="bt-footer">
+              <span class="reading-badge">📖 ५ मिनेट पढाइ</span>
+              <span class="bt-read">पढ्नुहोस् →</span>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <!-- ARTICLE 3 -->
+      <a href="article.html" class="big-topic">
+        <div class="big-topic-inner">
+          <img class="big-topic-img" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&q=80" alt="">
+          <div class="big-topic-body">
+            <div>
+              <span class="bt-tag" style="background:var(--tag-world-bg);color:var(--tag-world)">विश्व</span>
+              <div class="bt-title">संयुक्त राष्ट्रसंघको जलवायु मतदान: के साँचै परिवर्तन आउँछ?</div>
+              <div class="bt-desc">संयुक्त राष्ट्रसंघले जलवायु वित्तसम्बन्धी ऐतिहासिक प्रस्ताव पारित गर्यो — के सहमति भयो र के यो पर्याप्त छ?</div>
+            </div>
+            <div class="bt-footer">
+              <span class="reading-badge">📖 ६ मिनेट पढाइ</span>
+              <span class="bt-read">पढ्नुहोस् →</span>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div>
+      <!-- REPLACE WITH YOUR GOOGLE ADSENSE CODE -->
+      <div class="sidebar-ad"><span>300 × 250 — Ad Space</span></div>
+
+      <div class="sidebar-box">
+        <div class="sb-title">📊 एक नजरमा</div>
+        <div class="sb-stat-grid">
+          <div class="sb-stat"><div class="sb-stat-val">३</div><div class="sb-stat-lbl">विषयहरू</div></div>
+          <div class="sb-stat"><div class="sb-stat-val">निःशुल्क</div><div class="sb-stat-lbl">सधैं</div></div>
+        </div>
+      </div>
+
+      <div class="about-card">
+        <div class="about-card-title">👤 यो साइटबारे</div>
+        <div class="about-card-text">यो एक <strong>व्यक्तिगत प्रयास</strong> हो — नेपालीहरूलाई सत्य र तथ्यका आधारमा जागरूक बनाउने सानो कदम। कुनै व्यावसायिक उद्देश्य छैन, केवल <strong>सही जानकारी फैलाउने</strong> इच्छा।</div>
+      </div>
+
+      <div class="newsletter-card">
+        <div class="nl-title">सूचित रहनुहोस्</div>
+        <div class="nl-desc">नयाँ विषय थपिएपछि सबैभन्दा पहिले थाहा पाउनुहोस्।</div>
+        <input class="nl-input" type="email" placeholder="your@email.com">
+        <button class="nl-btn">सूचना पठाउनुहोस्</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="f-brand-name"><span class="nepal">Nepal </span><span class="rest">Facts & Truths</span></div>
+        <div class="f-desc">नेपालीहरूलाई सत्य र तथ्यका आधारमा जागरूक बनाउने एक व्यक्तिगत डिजिटल मञ्च।</div>
+        <div class="f-mission">"सत्य र तथ्यमा आधारित जागरण"</div>
+      </div>
+      <div class="f-col">
+        <h4>विषयहरू</h4>
+        <a href="#">नेपाल</a>
+        <a href="#">विश्व</a>
+        <a href="#">प्रविधि</a>
+      </div>
+      <div class="f-col">
+        <h4>सम्पर्क</h4>
+        <a href="mailto:your@email.com">सम्पर्क गर्नुहोस्</a>
+        <a href="#">गोपनीयता नीति</a>
+        <a href="#">विज्ञापन</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Nepal Facts & Truths — एक व्यक्तिगत प्रयास। काठमाडौं, नेपाल।</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const d = new Date();
+  const days = ['आइतबार','सोमबार','मंगलबार','बुधबार','बिहीबार','शुक्रबार','शनिबार'];
+  const months = ['जनवरी','फेब्रुअरी','मार्च','अप्रिल','मे','जुन','जुलाई','अगस्ट','सेप्टेम्बर','अक्टोबर','नोभेम्बर','डिसेम्बर'];
+  document.getElementById('today-date').textContent = days[d.getDay()] + ', ' + d.getDate() + ' ' + months[d.getMonth()] + ' ' + d.getFullYear() + ' — काठमाडौं, नेपाल';
+</script>
+</body>
+</html>
