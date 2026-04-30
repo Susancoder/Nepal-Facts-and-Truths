@@ -3,217 +3,147 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="अध्यादेश भनेको के हो? संसद छलेर कानून बनाउने यो बाटोबारे सबै तथ्य — Nepal Facts & Truths">
-<title>अध्यादेश भनेको के हो? — Nepal Facts & Truths</title>
+<meta name="description" content="नेपालीहरूलाई सत्य र तथ्यका आधारमा जागरूक बनाउने डिजिटल मञ्च।">
+<title>Nepal Facts & Truths — सत्य र तथ्यमा आधारित जागरण</title>
 <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Nepali:ital@0;1&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
   --red:#B91C1C;--red-dark:#7F1D1D;--red-light:#FEF2F2;
-  --gold:#D97706;--gold-light:#FFFBEB;
-  --green:#166534;--green-light:#F0FDF4;
-  --purple:#6B21A8;--purple-light:#FDF4FF;
+  --gold:#D97706;
   --ink:#111827;--ink2:#374151;--muted:#6B7280;
   --border:#E5E7EB;--bg:#F9FAFB;--white:#FFFFFF;--ad:#F3F4F6;
+  --tag-nepal-bg:#FEF2F2;--tag-nepal:#991B1B;
+  --tag-world-bg:#EFF6FF;--tag-world:#1D4ED8;
+  --tag-tech-bg:#F0FDF4;--tag-tech:#166534;
 }
-body{font-family:'Noto Sans Devanagari',sans-serif;background:var(--bg);color:var(--ink);font-size:15px;line-height:1.8}
+body{font-family:'Noto Sans Devanagari',sans-serif;background:var(--bg);color:var(--ink);font-size:15px;line-height:1.7}
 a{text-decoration:none;color:inherit}
 img{display:block}
  
 .topbar{background:var(--red-dark);color:#FCA5A5;font-size:11.5px;padding:7px 0}
 .topbar-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center}
 .topbar-right{display:flex;gap:14px}
-.topbar-right a{color:#FCA5A5;font-size:11px;font-weight:500;font-family:'DM Sans',sans-serif}
+.topbar-right a{color:#FCA5A5;font-size:11px;font-weight:500;font-family:'DM Sans',sans-serif;transition:color .2s}
+.topbar-right a:hover{color:#fff}
  
 header{background:var(--white);border-bottom:3px solid var(--red)}
-.header-inner{max-width:1100px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand-name{font-family:'Playfair Display',serif;font-size:28px;font-weight:900;line-height:1}
+.header-inner{max-width:1100px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand-name{font-family:'Playfair Display',serif;font-size:34px;font-weight:900;line-height:1;letter-spacing:-0.5px}
 .brand-name .nepal{color:var(--red)}
 .brand-name .rest{color:var(--ink)}
-.brand-sub{font-size:10px;color:var(--muted);letter-spacing:0.16em;text-transform:uppercase;margin-top:3px;font-weight:600;font-family:'DM Sans',sans-serif}
-.header-ad{background:var(--ad);border:1px dashed #D1D5DB;width:420px;height:60px;display:flex;align-items:center;justify-content:center;border-radius:6px}
+.brand-sub{font-size:10.5px;color:var(--muted);letter-spacing:0.16em;text-transform:uppercase;margin-top:4px;font-weight:600;font-family:'DM Sans',sans-serif}
+.header-ad{background:var(--ad);border:1px dashed #D1D5DB;width:420px;height:64px;display:flex;align-items:center;justify-content:center;border-radius:6px}
 .header-ad span{font-size:10px;color:#9CA3AF;letter-spacing:0.1em;text-transform:uppercase;font-family:'DM Sans',sans-serif}
+.header-right{display:flex;gap:10px;align-items:center}
+.search-box{display:flex;align-items:center;gap:8px;background:var(--bg);border:1px solid var(--border);border-radius:24px;padding:8px 16px;width:180px}
+.search-box input{border:none;background:transparent;font-size:13px;color:var(--ink);outline:none;width:100%;font-family:'Noto Sans Devanagari',sans-serif}
+.search-box input::placeholder{color:var(--muted)}
  
 nav{background:var(--ink);position:sticky;top:0;z-index:99}
 .nav-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center}
-.nav-link{font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#9CA3AF;padding:13px 18px;border-bottom:3px solid transparent;white-space:nowrap;transition:all .2s;cursor:pointer;display:inline-block}
+.nav-link{font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#9CA3AF;padding:13px 18px;border-bottom:3px solid transparent;white-space:nowrap;transition:all .2s;cursor:pointer}
 .nav-link:hover{color:#fff}
 .nav-link.active{color:#fff;border-bottom-color:var(--red)}
  
+.mission-bar{background:var(--red-light);border-bottom:1px solid #FECACA;padding:10px 0}
+.mission-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:12px}
+.mission-text{font-size:13px;color:var(--red-dark);font-weight:500}
+.mission-text strong{font-weight:700}
+ 
 .page{max-width:1100px;margin:0 auto;padding:32px 24px}
  
-.breadcrumb{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--muted);margin-bottom:24px;font-family:'DM Sans',sans-serif;flex-wrap:wrap}
-.breadcrumb a{color:var(--red)}
-.breadcrumb-sep{color:var(--border)}
+.hero{display:grid;grid-template-columns:1.6fr 1fr;gap:0;border-radius:14px;overflow:hidden;margin-bottom:32px;border:1px solid var(--border)}
+.hero-img-wrap{position:relative;background:#1a0a0a;cursor:pointer;overflow:hidden}
+.hero-img-wrap img{width:100%;height:420px;object-fit:cover;opacity:0.5;transition:opacity .4s}
+.hero-img-wrap:hover img{opacity:0.38}
+.hero-body{position:absolute;bottom:0;left:0;right:0;padding:32px;background:linear-gradient(to top,rgba(0,0,0,0.9) 0%,transparent 100%)}
+.hero-pill{display:inline-flex;align-items:center;gap:6px;background:var(--red);color:#fff;font-size:10px;font-weight:700;padding:4px 12px;border-radius:20px;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:14px;font-family:'DM Sans',sans-serif}
+.hero-title{font-family:'Tiro Devanagari Nepali',serif;font-size:26px;color:#fff;line-height:1.4;margin-bottom:10px}
+.hero-desc{font-size:13.5px;color:#FCA5A5;line-height:1.7;margin-bottom:14px}
+.hero-meta{font-size:12px;color:#FCA5A5;display:flex;align-items:center;gap:8px;font-family:'DM Sans',sans-serif}
+.dot{width:3px;height:3px;border-radius:50%;background:#FCA5A5;display:inline-block}
+.read-btn{display:inline-flex;align-items:center;gap:6px;background:var(--red);color:#fff;font-size:13px;font-weight:600;padding:10px 22px;border-radius:24px;margin-top:14px;cursor:pointer;border:none;font-family:'DM Sans',sans-serif;transition:background .2s}
+.read-btn:hover{background:var(--red-dark)}
  
-.article-layout{display:grid;grid-template-columns:1fr 300px;gap:40px}
+.hero-sidebar{background:var(--white);padding:24px;display:flex;flex-direction:column}
+.hs-label{font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid var(--red)}
+.hs-topic{padding:16px 0;border-bottom:1px solid var(--border);cursor:pointer;transition:all .2s}
+.hs-topic:last-child{border-bottom:none;padding-bottom:0}
+.hs-topic:hover{padding-left:5px}
+.hs-tag{font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:3px 10px;border-radius:20px;display:inline-block;margin-bottom:8px;font-family:'DM Sans',sans-serif}
+.hs-title{font-family:'Tiro Devanagari Nepali',serif;font-size:17px;color:var(--ink);line-height:1.45;margin-bottom:6px;transition:color .2s}
+.hs-topic:hover .hs-title{color:var(--red)}
+.hs-meta{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:6px;font-family:'DM Sans',sans-serif}
  
-/* ARTICLE HEADER */
-.trending-badge{display:inline-flex;align-items:center;gap:6px;background:#FEF3C7;color:#92400E;font-size:11px;font-weight:700;padding:5px 14px;border-radius:20px;margin-bottom:10px;font-family:'DM Sans',sans-serif}
-.article-tag{font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:5px 14px;border-radius:20px;display:inline-block;margin-bottom:14px;font-family:'DM Sans',sans-serif;background:var(--red-light);color:var(--red-dark);margin-left:8px}
-.article-title{font-family:'Tiro Devanagari Nepali',serif;font-size:36px;line-height:1.3;color:var(--ink);margin-bottom:16px}
-.article-desc{font-size:16px;color:var(--ink2);line-height:1.75;margin-bottom:20px;border-left:4px solid var(--red);padding-left:16px}
-.article-meta{display:flex;align-items:center;gap:16px;padding:14px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-bottom:28px;flex-wrap:wrap}
-.meta-item{display:flex;align-items:center;gap:6px;font-size:12.5px;color:var(--muted);font-family:'DM Sans',sans-serif}
-.meta-item strong{color:var(--ink2);font-weight:600}
-.reading-pill{background:var(--red-light);color:var(--red-dark);padding:4px 12px;border-radius:20px;font-size:12px;font-weight:700;font-family:'DM Sans',sans-serif}
+.ad-banner{background:var(--ad);border:1px dashed #D1D5DB;height:88px;display:flex;align-items:center;justify-content:center;border-radius:8px;margin-bottom:36px}
+.ad-banner span{font-size:10px;color:#9CA3AF;letter-spacing:0.1em;text-transform:uppercase;font-family:'DM Sans',sans-serif}
  
-/* ARTICLE BODY */
-.article-body{font-size:16px;line-height:1.9;color:var(--ink2)}
-.article-body h2{font-family:'Tiro Devanagari Nepali',serif;font-size:24px;color:var(--ink);margin:32px 0 14px;padding-bottom:8px;border-bottom:2px solid var(--red-light)}
-.article-body p{margin-bottom:18px}
-.article-body strong{color:var(--ink);font-weight:700}
+.main-grid{display:grid;grid-template-columns:1fr 280px;gap:28px;margin-bottom:32px}
  
-/* DEFINITION BOX */
-.def-box{background:var(--ink);border-radius:12px;padding:24px 28px;margin:24px 0;position:relative;overflow:hidden}
-.def-box::before{content:'अध्यादेश';position:absolute;right:-10px;top:-20px;font-family:'DM Sans',sans-serif;font-size:80px;font-weight:700;color:rgba(255,255,255,0.04);pointer-events:none}
-.def-label{font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:#9CA3AF;margin-bottom:10px}
-.def-text{font-family:'Tiro Devanagari Nepali',serif;font-size:22px;color:#fff;line-height:1.6;margin-bottom:10px}
-.def-ref{font-size:12px;color:#6B7280;font-family:'DM Sans',sans-serif}
+.section-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--red)}
+.section-hd h2{font-family:'DM Sans',sans-serif;font-size:17px;font-weight:700;color:var(--ink);text-transform:uppercase;letter-spacing:0.06em;display:flex;align-items:center;gap:8px}
+.section-count{font-size:12px;color:var(--muted);background:var(--bg);border:1px solid var(--border);padding:3px 10px;border-radius:20px;font-family:'DM Sans',sans-serif;font-weight:400;text-transform:none;letter-spacing:0}
  
-/* PROCESS STEPS */
-.steps{display:flex;flex-direction:column;gap:0;margin:20px 0}
-.step-row{display:flex;gap:0;align-items:stretch}
-.step-left{width:52px;display:flex;flex-direction:column;align-items:center;flex-shrink:0}
-.step-dot{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:700;color:#fff;flex-shrink:0}
-.step-connector{flex:1;width:1px;background:var(--border);margin:4px 0}
-.step-body{padding:0 0 24px 16px;flex:1}
-.step-title{font-size:15px;font-weight:600;color:var(--ink);margin-bottom:4px}
-.step-desc{font-size:13.5px;color:var(--muted);line-height:1.65}
+.big-topic{background:var(--white);border:1px solid var(--border);border-radius:14px;overflow:hidden;cursor:pointer;transition:all .2s;margin-bottom:16px;display:block}
+.big-topic:hover{border-color:#FCA5A5;transform:translateY(-1px)}
+.big-topic-inner{display:flex}
+.big-topic-img{width:260px;height:190px;object-fit:cover;flex-shrink:0;background:#ddd}
+.big-topic-body{padding:22px 26px;display:flex;flex-direction:column;justify-content:space-between;flex:1}
+.bt-tag{font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:4px 12px;border-radius:20px;display:inline-block;margin-bottom:10px;font-family:'DM Sans',sans-serif}
+.bt-title{font-family:'Tiro Devanagari Nepali',serif;font-size:20px;color:var(--ink);line-height:1.4;margin-bottom:9px;transition:color .2s}
+.big-topic:hover .bt-title{color:var(--red)}
+.bt-desc{font-size:13.5px;color:var(--muted);line-height:1.7;margin-bottom:14px}
+.bt-footer{display:flex;align-items:center;justify-content:space-between}
+.reading-badge{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;background:var(--red-light);color:var(--red-dark);padding:4px 12px;border-radius:20px;font-family:'DM Sans',sans-serif}
+.bt-read{font-size:13px;font-weight:600;color:var(--red);font-family:'DM Sans',sans-serif}
  
-/* RULES GRID */
-.rules-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
-.rule-card{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:18px;position:relative;overflow:hidden}
-.rule-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
-.rule-card.red::before{background:var(--red)}
-.rule-card.gold::before{background:var(--gold)}
-.rule-card.green::before{background:var(--green)}
-.rule-card.ink::before{background:var(--ink)}
-.rule-icon{font-size:20px;margin-bottom:8px}
-.rule-title{font-size:13.5px;font-weight:600;color:var(--ink);margin-bottom:6px}
-.rule-desc{font-size:13px;color:var(--muted);line-height:1.6}
- 
-/* BREAKING BOX */
-.breaking-box{background:var(--white);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:28px 0}
-.breaking-head{background:var(--red);padding:14px 20px;display:flex;align-items:center;gap:12px}
-.breaking-pill{background:#fff;color:var(--red);font-size:10px;font-weight:700;padding:3px 10px;border-radius:20px;font-family:'DM Sans',sans-serif;letter-spacing:0.08em;text-transform:uppercase}
-.breaking-label{font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;color:#fff}
-.breaking-body{padding:20px}
-.issue-item{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--border)}
-.issue-item:last-child{border-bottom:none;padding-bottom:0}
-.issue-bar{width:4px;border-radius:4px;flex-shrink:0;min-height:40px}
-.issue-bar.red{background:var(--red)}
-.issue-bar.purple{background:#7C3AED}
-.issue-bar.gold{background:var(--gold)}
-.issue-bar.green{background:#059669}
-.issue-content{}
-.issue-title{font-size:14.5px;font-weight:600;color:var(--ink);margin-bottom:5px}
-.issue-desc{font-size:13px;color:var(--muted);line-height:1.65}
- 
-/* PROS CONS */
-.procon{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
-.pro-col{background:var(--green-light);border:1px solid #BBF7D0;border-radius:10px;overflow:hidden}
-.con-col{background:var(--red-light);border:1px solid #FECACA;border-radius:10px;overflow:hidden}
-.pc-head{font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;padding:12px 16px;letter-spacing:0.05em;text-transform:uppercase}
-.pro-col .pc-head{background:#DCFCE7;color:var(--green)}
-.con-col .pc-head{background:#FEE2E2;color:var(--red-dark)}
-.pc-body{padding:12px 16px}
-.pc-item{font-size:13.5px;color:var(--ink2);padding:6px 0;border-bottom:1px solid rgba(0,0,0,0.06);display:flex;align-items:flex-start;gap:8px}
-.pc-item:last-child{border-bottom:none}
-.pc-item::before{content:'•';flex-shrink:0;margin-top:2px}
-.pro-col .pc-item::before{color:var(--green)}
-.con-col .pc-item::before{color:var(--red)}
- 
-/* HISTORY */
-.history{display:flex;flex-direction:column;gap:0;margin:20px 0}
-.hist-item{display:flex;gap:16px;padding-bottom:24px;position:relative}
-.hist-item::before{content:'';position:absolute;left:38px;top:32px;bottom:0;width:1px;background:var(--border)}
-.hist-item:last-child::before{display:none}
-.hist-year{font-family:'DM Sans',sans-serif;font-size:12px;font-weight:700;color:var(--white);background:var(--red-dark);padding:6px 10px;border-radius:8px;height:fit-content;flex-shrink:0;text-align:center;min-width:52px}
-.hist-content{flex:1}
-.hist-title{font-size:15px;font-weight:600;color:var(--ink);margin-bottom:5px}
-.hist-desc{font-size:13px;color:var(--muted);line-height:1.65}
- 
-/* CONCLUSION */
-.conclusion-box{background:var(--ink);border-radius:12px;padding:24px;margin:28px 0}
-.conclusion-box h3{font-family:'Tiro Devanagari Nepali',serif;font-size:22px;color:#fff;margin-bottom:12px}
-.conclusion-box p{font-size:15px;color:#D1D5DB;line-height:1.8}
- 
-/* IN ARTICLE AD */
-.in-article-ad{background:var(--ad);border:1px dashed #D1D5DB;height:90px;display:flex;align-items:center;justify-content:center;border-radius:8px;margin:28px 0}
-.in-article-ad span{font-size:10px;color:#9CA3AF;letter-spacing:0.1em;text-transform:uppercase;font-family:'DM Sans',sans-serif}
- 
-/* SHARE */
-.share-section{margin:28px 0;padding:20px;background:var(--white);border:1px solid var(--border);border-radius:12px;text-align:center}
-.share-title{font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:14px}
-.share-btns{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
-.share-btn{display:inline-flex;align-items:center;gap:6px;padding:9px 20px;border-radius:24px;font-size:13px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;border:none;transition:opacity .2s}
-.share-btn:hover{opacity:.85}
-.share-fb{background:#1877F2;color:#fff}
-.share-tw{background:#000;color:#fff}
-.share-wa{background:#25D366;color:#fff}
-.share-copy{background:var(--bg);color:var(--ink);border:1px solid var(--border)!important}
- 
-/* RELATED */
-.related-section{margin-top:36px}
-.related-title{font-family:'DM Sans',sans-serif;font-size:17px;font-weight:700;color:var(--ink);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:16px;padding-bottom:12px;border-bottom:2px solid var(--red)}
-.related-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.related-card{background:var(--white);border:1px solid var(--border);border-radius:10px;overflow:hidden;cursor:pointer;transition:all .2s;display:block}
-.related-card:hover{border-color:#FCA5A5;transform:translateY(-1px)}
-.related-card img{width:100%;height:110px;object-fit:cover;background:#ddd}
-.related-card-body{padding:12px}
-.related-tag{font-size:9.5px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:2px 8px;border-radius:20px;display:inline-block;margin-bottom:6px;font-family:'DM Sans',sans-serif}
-.related-title-text{font-family:'Tiro Devanagari Nepali',serif;font-size:14px;color:var(--ink);line-height:1.4}
-.related-card:hover .related-title-text{color:var(--red)}
-.related-meta{font-size:11px;color:var(--muted);margin-top:6px;font-family:'DM Sans',sans-serif}
- 
-/* SIDEBAR */
 .sidebar-ad{background:var(--ad);border:1px dashed #D1D5DB;height:250px;display:flex;align-items:center;justify-content:center;border-radius:8px;margin-bottom:20px}
 .sidebar-ad span{font-size:10px;color:#9CA3AF;letter-spacing:0.1em;text-transform:uppercase;font-family:'DM Sans',sans-serif}
 .sidebar-box{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:18px;margin-bottom:20px}
-.sb-label{font-family:'DM Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--border)}
-.sb-topic{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--border);cursor:pointer;display:block}
-.sb-topic:last-child{border-bottom:none;padding-bottom:0}
-.sb-topic-inner{display:flex;gap:12px}
-.sb-topic img{width:64px;height:48px;object-fit:cover;border-radius:6px;flex-shrink:0;background:#ddd}
-.sb-topic-tag{font-size:9.5px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:2px 7px;border-radius:20px;display:inline-block;margin-bottom:4px;font-family:'DM Sans',sans-serif}
-.sb-topic-title{font-size:13px;color:var(--ink);line-height:1.4;font-weight:500;transition:color .2s}
-.sb-topic:hover .sb-topic-title{color:var(--red)}
-.sb-topic-meta{font-size:11px;color:var(--muted);margin-top:3px;font-family:'DM Sans',sans-serif}
+.sb-title{font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;color:var(--ink);margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--border);text-transform:uppercase;letter-spacing:0.06em}
+.sb-stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.sb-stat{background:var(--red-light);border-radius:8px;padding:12px;text-align:center}
+.sb-stat-val{font-family:'DM Sans',sans-serif;font-size:22px;font-weight:700;color:var(--red)}
+.sb-stat-lbl{font-size:11px;color:var(--red-dark);margin-top:2px;font-family:'DM Sans',sans-serif}
  
-.progress-box{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:18px;margin-bottom:20px}
-.progress-label{font-family:'DM Sans',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
-.progress-bar-wrap{background:var(--bg);border-radius:20px;height:8px;overflow:hidden;margin-bottom:6px}
-.progress-bar{background:var(--red);height:100%;border-radius:20px;width:0%;transition:width .2s}
-.progress-text{font-size:12px;color:var(--muted);font-family:'DM Sans',sans-serif}
+.about-card{background:var(--white);border:1px solid var(--border);border-radius:12px;padding:20px}
+.about-card-title{font-family:'DM Sans',sans-serif;font-size:13px;font-weight:700;color:var(--ink);margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--border);text-transform:uppercase;letter-spacing:0.06em}
+.about-card-text{font-size:13px;color:var(--muted);line-height:1.75}
+.about-card-text strong{color:var(--red-dark);font-weight:600}
  
-.sidebar-ad2{background:var(--ad);border:1px dashed #D1D5DB;height:200px;display:flex;align-items:center;justify-content:center;border-radius:8px;margin-bottom:20px}
-.sidebar-ad2 span{font-size:10px;color:#9CA3AF;letter-spacing:0.1em;text-transform:uppercase;font-family:'DM Sans',sans-serif}
- 
-.newsletter-card{background:var(--red-dark);border-radius:12px;padding:20px}
-.nl-title{font-family:'Tiro Devanagari Nepali',serif;font-size:19px;color:#fff;margin-bottom:6px}
-.nl-desc{font-size:13px;color:#FCA5A5;line-height:1.65;margin-bottom:14px}
+.newsletter-card{background:var(--red-dark);border-radius:12px;padding:20px;margin-top:16px}
+.nl-title{font-family:'Tiro Devanagari Nepali',serif;font-size:20px;color:#fff;margin-bottom:6px}
+.nl-desc{font-size:13px;color:#FCA5A5;line-height:1.65;margin-bottom:16px}
 .nl-input{width:100%;padding:9px 14px;border:none;border-radius:8px;font-size:13px;font-family:'DM Sans',sans-serif;outline:none;margin-bottom:8px}
 .nl-btn{width:100%;background:var(--gold);color:#fff;border:none;padding:10px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif}
 .nl-btn:hover{opacity:.88}
  
-footer{background:#1a0505;color:#6B7280;padding:28px 0 16px;margin-top:48px}
-.footer-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-.f-brand-name{font-family:'Playfair Display',serif;font-size:20px;font-weight:900}
+footer{background:#1a0505;color:#6B7280;padding:32px 0 16px;margin-top:16px}
+.footer-inner{max-width:1100px;margin:0 auto;padding:0 24px}
+.footer-top{display:flex;align-items:flex-start;justify-content:space-between;gap:32px;margin-bottom:24px;flex-wrap:wrap}
+.f-brand-name{font-family:'Playfair Display',serif;font-size:22px;font-weight:900;margin-bottom:8px}
 .f-brand-name .nepal{color:var(--red)}
 .f-brand-name .rest{color:#fff}
-.f-links{display:flex;gap:16px}
-.f-links a{font-size:12.5px;color:#4B5563;font-family:'DM Sans',sans-serif;transition:color .2s}
-.f-links a:hover{color:var(--red)}
-.f-copy{font-size:12px;color:#374151;font-family:'DM Sans',sans-serif;width:100%;margin-top:12px;padding-top:12px;border-top:1px solid #2a0a0a}
+.f-desc{font-size:12.5px;color:#4B5563;line-height:1.75;max-width:280px}
+.f-mission{font-size:12px;color:var(--red);font-style:italic;margin-top:8px;font-weight:600}
+.f-col h4{font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#9CA3AF;margin-bottom:12px}
+.f-col a{display:block;font-size:13px;color:#4B5563;margin-bottom:8px;transition:color .2s}
+.f-col a:hover{color:var(--red)}
+.footer-bottom{border-top:1px solid #2a0a0a;padding-top:14px;display:flex;justify-content:space-between;font-size:12px;flex-wrap:wrap;gap:8px;font-family:'DM Sans',sans-serif;color:#374151}
  
 @media(max-width:860px){
-  .article-layout{grid-template-columns:1fr}
-  .rules-grid{grid-template-columns:1fr}
-  .procon{grid-template-columns:1fr}
-  .related-grid{grid-template-columns:1fr}
+  .hero{grid-template-columns:1fr}
+  .hero-img-wrap img{height:260px}
+  .big-topic-inner{flex-direction:column}
+  .big-topic-img{width:100%;height:180px}
+  .main-grid{grid-template-columns:1fr}
   .header-ad{display:none}
-  .article-title{font-size:26px}
+  .footer-top{flex-direction:column}
+}
+@media(max-width:540px){
+  .brand-name{font-size:24px}
+  .hero-title{font-size:20px}
 }
 </style>
 </head>
@@ -223,310 +153,135 @@ footer{background:#1a0505;color:#6B7280;padding:28px 0 16px;margin-top:48px}
   <div class="topbar-inner">
     <span style="font-family:'DM Sans',sans-serif" id="today-date"></span>
     <div class="topbar-right">
-      <a href="#">नेपाली</a><a href="#">EN</a>
+      <a href="#">नेपाली</a>
+      <a href="#">EN</a>
     </div>
   </div>
 </div>
  
 <header>
   <div class="header-inner">
-    <a href="index.html">
+    <div>
       <div class="brand-name"><span class="nepal">Nepal </span><span class="rest">Facts & Truths</span></div>
       <div class="brand-sub">सत्य र तथ्यमा आधारित जागरण</div>
-    </a>
+    </div>
+    <!-- REPLACE THIS WITH YOUR GOOGLE ADSENSE CODE -->
     <div class="header-ad"><span>728 × 90 — Ad Space</span></div>
+    <div class="header-right">
+      <div class="search-box">
+        <span style="color:var(--muted);font-size:14px">🔍</span>
+        <input type="text" placeholder="विषय खोज्नुहोस्...">
+      </div>
+    </div>
   </div>
 </header>
  
 <nav>
   <div class="nav-inner">
-    <a href="index.html" class="nav-link">गृहपृष्ठ</a>
-    <a href="#" class="nav-link active">🇳🇵 नेपाल</a>
-    <a href="#" class="nav-link">🌍 विश्व</a>
+    <div class="nav-link active">गृहपृष्ठ</div>
+    <a href="#" class="nav-link">🇳🇵 नेपाल</a>
+    
     <a href="#" class="nav-link">💻 प्रविधि</a>
   </div>
 </nav>
  
+<div class="mission-bar">
+  <div class="mission-inner">
+    <span class="mission-text">🎯 <strong>उद्देश्य:</strong> नेपालीहरूलाई सत्य र तथ्यका आधारमा जागरूक बनाउनु — सही जानकारी, सरल भाषामा।</span>
+  </div>
+</div>
+ 
 <div class="page">
-  <div class="breadcrumb">
-    <a href="index.html">गृहपृष्ठ</a>
-    <span class="breadcrumb-sep">›</span>
-    <a href="#">नेपाल</a>
-    <span class="breadcrumb-sep">›</span>
-    <span>अध्यादेश भनेको के हो?</span>
+ 
+  <div class="hero">
+    <div class="hero-img-wrap">
+      <img src="https://images.unsplash.com/photo-1555848962-6e79363ec58f?w=900&q=80" alt="अध्यादेश">
+      <div class="hero-body">
+        <div class="hero-pill">🔥 ट्रेन्डिङ विषय</div>
+        <div class="hero-title">अध्यादेश भनेको के हो? — संसद छलेर कानून बनाउने बाटो</div>
+        <div class="hero-desc">अहिले नेपालमा सबैभन्दा धेरै चर्चामा रहेको विषय। परिभाषादेखि हालको विवादसम्म — सबै तथ्य सरल भाषामा।</div>
+        <div class="hero-meta">
+          <span>नेपाल</span><span class="dot"></span>
+          <span>७ मिनेट पढाइ</span><span class="dot"></span>
+          <span>आज अपडेट</span>
+        </div>
+        <a href="adhyadesh.html"><button class="read-btn">पूरा पढ्नुहोस् →</button></a>
+      </div>
+    </div>
+    <div class="hero-sidebar">
+      <div class="hs-label">अझै पढ्नुहोस्</div>
+      <a href="article.html">
+        <div class="hs-topic">
+          <span class="hs-tag" style="background:var(--tag-tech-bg);color:var(--tag-tech)">प्रविधि</span>
+          <div class="hs-title">एआई चिप युद्ध के हो — र नेपाललाई किन फरक पर्छ?</div>
+          <div class="hs-meta"><span>८ मिनेट</span><span class="dot" style="background:var(--muted)"></span><span>आज अपडेट</span></div>
+        </div>
+      </a>
+    </div>
   </div>
  
-  <div class="article-layout">
-    <div class="article-main">
+  <!-- REPLACE WITH YOUR GOOGLE ADSENSE CODE -->
+  <div class="ad-banner"><span>Leaderboard Ad — 728 × 90</span></div>
  
-      <div>
-        <span class="trending-badge">🔥 अहिले ट्रेन्डिङ</span>
-        <span class="article-tag">🇳🇵 नेपाल</span>
-      </div>
-      <h1 class="article-title">अध्यादेश भनेको के हो? — संसद छलेर कानून बनाउने बाटो</h1>
-      <div class="article-desc">अहिले नेपालमा सबैभन्दा धेरै चर्चामा रहेको विषय — अध्यादेश। यसको परिभाषादेखि प्रक्रिया, नियम र हालको विवादसम्म सबै तथ्य — सरल भाषामा।</div>
-      <div class="article-meta">
-        <span class="meta-item">📅 <strong id="pub-date"></strong></span>
-        <span class="meta-item">🕐 <strong>आज अपडेट</strong></span>
-        <span class="reading-pill">📖 ७ मिनेट पढाइ</span>
+  <div class="main-grid">
+    <div>
+      <div class="section-hd">
+        <h2>सबै विषयहरू <span class="section-count">२ उपलब्ध</span></h2>
       </div>
  
-      <div class="article-body">
- 
-        <p>आजकल सामाजिक सञ्जालमा "अध्यादेश" शब्द निकै चर्चामा छ। कसैले विरोध गर्दैछन्, कसैले समर्थन। तर वास्तवमा अध्यादेश के हो? यो कसरी बन्छ? र यसका नियमहरू के छन्? आउनुस्, तथ्यमा आधारित भएर बुझौं।</p>
- 
-        <h2>अध्यादेश भनेको के हो?</h2>
- 
-        <div class="def-box">
-          <div class="def-label">परिभाषा</div>
-          <div class="def-text">संसद अधिवेशनमा नभएको बेला सरकारले राष्ट्रपतिमार्फत जारी गर्ने <strong style="color:#FCA5A5">अस्थायी कानून</strong> नै अध्यादेश हो।</div>
-          <div class="def-ref">संवैधानिक आधार: नेपालको संविधान, धारा ११४</div>
-        </div>
- 
-        <p>सरल भाषामा भन्नुपर्दा — जब संसद बन्द हुन्छ र कुनै जरुरी काम गर्नुपर्छ, सरकारले संसदको बाटो नगई राष्ट्रपतिमार्फत कानून जारी गर्न सक्छ। यही कानूनलाई अध्यादेश भनिन्छ।</p>
- 
-        <h2>अध्यादेश कसरी बन्छ?</h2>
- 
-        <div class="steps">
-          <div class="step-row">
-            <div class="step-left">
-              <div class="step-dot" style="background:var(--ink)">१</div>
-              <div class="step-connector"></div>
+      <!-- ARTICLE 1: अध्यादेश -->
+      <a href="adhyadesh.html" class="big-topic">
+        <div class="big-topic-inner">
+          <img class="big-topic-img" src="https://images.unsplash.com/photo-1555848962-6e79363ec58f?w=500&q=80" alt="">
+          <div class="big-topic-body">
+            <div>
+              <span class="bt-tag" style="background:var(--tag-nepal-bg);color:var(--tag-nepal)">🇳🇵 नेपाल</span>
+              <div class="bt-title">अध्यादेश भनेको के हो? — संसद छलेर कानून बनाउने बाटो</div>
+              <div class="bt-desc">अहिले नेपालमा सबैभन्दा धेरै चर्चामा रहेको विषय। परिभाषा, प्रक्रिया, नियम र हालको विवाद — सबै तथ्य सरल भाषामा।</div>
             </div>
-            <div class="step-body">
-              <div class="step-title">सरकारको निर्णय</div>
-              <div class="step-desc">मन्त्रिपरिषद्ले अध्यादेश ल्याउने निर्णय गर्छ। संसद नभएको बेला मात्र यो अधिकार प्रयोग हुन्छ।</div>
-            </div>
-          </div>
-          <div class="step-row">
-            <div class="step-left">
-              <div class="step-dot" style="background:var(--gold)">२</div>
-              <div class="step-connector"></div>
-            </div>
-            <div class="step-body">
-              <div class="step-title">राष्ट्रपतिसमक्ष सिफारिस</div>
-              <div class="step-desc">मन्त्रिपरिषद्ले राष्ट्रपतिलाई अध्यादेश जारी गर्न सिफारिस गर्छ।</div>
-            </div>
-          </div>
-          <div class="step-row">
-            <div class="step-left">
-              <div class="step-dot" style="background:var(--red)">३</div>
-              <div class="step-connector"></div>
-            </div>
-            <div class="step-body">
-              <div class="step-title">राष्ट्रपतिको अनुमोदन</div>
-              <div class="step-desc">राष्ट्रपतिले स्वीकृत गरे मात्र अध्यादेश जारी हुन्छ। राष्ट्रपतिले रोक्न पनि सक्छन् — यो एक महत्त्वपूर्ण जाँच हो।</div>
-            </div>
-          </div>
-          <div class="step-row">
-            <div class="step-left">
-              <div class="step-dot" style="background:#059669">४</div>
-            </div>
-            <div class="step-body">
-              <div class="step-title">तत्काल कानून लागु</div>
-              <div class="step-desc">अनुमोदनपछि तुरुन्तै कानूनको रूपमा लागु हुन्छ — संसदको बहसबिना।</div>
+            <div class="bt-footer">
+              <span class="reading-badge">📖 ७ मिनेट पढाइ</span>
+              <span class="bt-read">पढ्नुहोस् →</span>
             </div>
           </div>
         </div>
+      </a>
  
-        <div class="in-article-ad"><span>In-Article Ad — 728 × 90</span></div>
- 
-        <h2>मुख्य नियमहरू</h2>
- 
-        <div class="rules-grid">
-          <div class="rule-card red">
-            <div class="rule-icon">🚫</div>
-            <div class="rule-title">संसद चलिरहेको बेला नहुने</div>
-            <div class="rule-desc">संसद अधिवेशन जारी छँदा अध्यादेश ल्याउन संविधानले निषेध गरेको छ।</div>
-          </div>
-          <div class="rule-card gold">
-            <div class="rule-icon">⏱</div>
-            <div class="rule-title">६० दिनको म्याद मात्र</div>
-            <div class="rule-desc">संसद बसेपछि ६० दिनभित्र पारित नगरे अध्यादेश स्वतः खारेज हुन्छ।</div>
-          </div>
-          <div class="rule-card green">
-            <div class="rule-icon">🏛</div>
-            <div class="rule-title">राष्ट्रपतिले रोक्न सक्छन्</div>
-            <div class="rule-desc">राष्ट्रपतिले अनुमोदन नगरे अध्यादेश जारी हुँदैन — यो महत्त्वपूर्ण जाँच हो।</div>
-          </div>
-          <div class="rule-card ink">
-            <div class="rule-icon">✂️</div>
-            <div class="rule-title">संसदले खारेज गर्न सक्छ</div>
-            <div class="rule-desc">बहुमतले प्रस्ताव पारित गरेर संसदले जुनसुकै बेला अध्यादेश खारेज गर्न सक्छ।</div>
-          </div>
-        </div>
- 
-        <h2>अहिले नेपालमा के भइरहेको छ?</h2>
- 
-        <div class="breaking-box">
-          <div class="breaking-head">
-            <span class="breaking-pill">ब्रेकिङ</span>
-            <span class="breaking-label">हालको विवाद — २०८३</span>
-          </div>
-          <div class="breaking-body">
-            <div class="issue-item">
-              <div class="issue-bar red"></div>
-              <div class="issue-content">
-                <div class="issue-title">२ वटा विवादास्पद अध्यादेश</div>
-                <div class="issue-desc">सरकारले सहकारी र संवैधानिक निकायमा नियुक्ति सम्बन्धी २ वटा अध्यादेश राष्ट्रपतिसमक्ष सिफारिस गरेको छ — संसद छल्ने आरोप छ।</div>
-              </div>
+      <!-- ARTICLE 2: AI Chip -->
+      <a href="article.html" class="big-topic">
+        <div class="big-topic-inner">
+          <img class="big-topic-img" src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&q=80" alt="">
+          <div class="big-topic-body">
+            <div>
+              <span class="bt-tag" style="background:var(--tag-tech-bg);color:var(--tag-tech)">💻 प्रविधि</span>
+              <div class="bt-title">एआई चिप युद्ध के हो — र नेपाललाई किन फरक पर्छ?</div>
+              <div class="bt-desc">अमेरिका र चीनबीच संसारको सबैभन्दा शक्तिशाली कम्प्युटर चिपमाथि तीव्र प्रतिस्पर्धा छ — तथ्यमा आधारित सरल विश्लेषण।</div>
             </div>
-            <div class="issue-item">
-              <div class="issue-bar purple"></div>
-              <div class="issue-content">
-                <div class="issue-title">विपक्षको एकजुट विरोध</div>
-                <div class="issue-desc">विपक्षी दलहरूले संयुक्त रूपमा राष्ट्रपतिलाई अनुमोदन नगर्न आग्रह गरेका छन् — "यो संसदीय लोकतन्त्रमाथिको प्रहार हो" भनेका छन्।</div>
-              </div>
-            </div>
-            <div class="issue-item">
-              <div class="issue-bar gold"></div>
-              <div class="issue-content">
-                <div class="issue-title">सत्तापक्षभित्रै चर्को मतभेद</div>
-                <div class="issue-desc">कांग्रेसका महामन्त्री गगन थापाले आफ्नै सरकारको यो कदमलाई "कानूनी, राजनीतिक र नैतिक हिसाबले गलत" भनेका छन्।</div>
-              </div>
-            </div>
-            <div class="issue-item">
-              <div class="issue-bar green"></div>
-              <div class="issue-content">
-                <div class="issue-title">न्यायिक क्षेत्रको कडा प्रतिक्रिया</div>
-                <div class="issue-desc">नेपाल बार एसोसिएसनसहित न्याय क्षेत्रका संस्थाहरूले यो अध्यादेश असंवैधानिक भएको बताउँदै तत्काल फिर्ता लिन माग गरेका छन्।</div>
-              </div>
+            <div class="bt-footer">
+              <span class="reading-badge">📖 ८ मिनेट पढाइ</span>
+              <span class="bt-read">पढ्नुहोस् →</span>
             </div>
           </div>
         </div>
- 
-        <h2>फाइदा र बेफाइदा</h2>
-        <div class="procon">
-          <div class="pro-col">
-            <div class="pc-head">✓ फाइदाहरू</div>
-            <div class="pc-body">
-              <div class="pc-item">तत्काल कानून बनाउन सकिन्छ</div>
-              <div class="pc-item">आपतकालीन अवस्थामा उपयोगी</div>
-              <div class="pc-item">प्रशासनिक अड्चन हटाउँछ</div>
-              <div class="pc-item">संसदीय ढिलाइबाट बच्न सकिन्छ</div>
-              <div class="pc-item">राष्ट्रिय हितमा प्रभावकारी</div>
-            </div>
-          </div>
-          <div class="con-col">
-            <div class="pc-head">✗ बेफाइदाहरू</div>
-            <div class="pc-body">
-              <div class="pc-item">संसदको भूमिका कमजोर हुन्छ</div>
-              <div class="pc-item">राजनीतिक दुरुपयोगको खतरा</div>
-              <div class="pc-item">लोकतन्त्रको मर्म विपरीत</div>
-              <div class="pc-item">अदालतमा चुनौती हुन सक्छ</div>
-              <div class="pc-item">जनप्रतिनिधि बाइपास हुन्छन्</div>
-            </div>
-          </div>
-        </div>
- 
-        <h2>नेपालमा अध्यादेशको इतिहास</h2>
-        <div class="history">
-          <div class="hist-item">
-            <div class="hist-year">२०७८</div>
-            <div class="hist-content">
-              <div class="hist-title">संसद विघटन र अध्यादेश</div>
-              <div class="hist-desc">ओली सरकारले संसद विघटन गरेपछि अध्यादेशमार्फत शासन चलाउन खोजेको थियो — सर्वोच्च अदालतले संसद विघटन बदर गर्यो।</div>
-            </div>
-          </div>
-          <div class="hist-item">
-            <div class="hist-year">२०७८</div>
-            <div class="hist-content">
-              <div class="hist-title">नागरिकता अध्यादेश विवाद</div>
-              <div class="hist-desc">नागरिकता ऐनमा संशोधन गर्न अध्यादेश ल्याइयो — राजनीतिक विवाद बन्यो र संसदले पारित गरेन।</div>
-            </div>
-          </div>
-          <div class="hist-item">
-            <div class="hist-year">२०७९</div>
-            <div class="hist-content">
-              <div class="hist-title">बन्दी रिहाइ अध्यादेश</div>
-              <div class="hist-desc">जेल परेका नेताहरूलाई उन्मुक्ति दिलाउन ल्याइएको अध्यादेश चौतर्फी विरोधपछि सरकारले नै फिर्ता लियो।</div>
-            </div>
-          </div>
-          <div class="hist-item">
-            <div class="hist-year">२०८३</div>
-            <div class="hist-content">
-              <div class="hist-title">हालको विवाद — सहकारी र नियुक्ति अध्यादेश</div>
-              <div class="hist-desc">वर्तमान सरकारले ल्याएका २ वटा अध्यादेश विरुद्ध विपक्ष, न्यायिक क्षेत्र र सत्तापक्षभित्रैबाट विरोध भइरहेको छ।</div>
-            </div>
-          </div>
-        </div>
- 
-        <div class="conclusion-box">
-          <h3>निष्कर्ष</h3>
-          <p>अध्यादेश एउटा संवैधानिक औजार हो — न पूर्णतः राम्रो, न पूर्णतः नराम्रो। आपतकालमा यो उपयोगी हुन्छ, तर दुरुपयोग भयो भने लोकतन्त्रको लागि खतरनाक। एक सूचित नागरिकको रूपमा हाम्रो कर्तव्य हो — तथ्य जान्नु, बुझ्नु र आफ्नो मत राख्नु।</p>
-        </div>
- 
-      </div>
- 
-      <div class="share-section">
-        <div class="share-title">यो लेख साझा गर्नुहोस्</div>
-        <div class="share-btns">
-          <button class="share-btn share-fb" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">Facebook</button>
-          <button class="share-btn share-tw" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href))">Twitter / X</button>
-          <button class="share-btn share-wa" onclick="window.open('https://wa.me/?text='+encodeURIComponent(document.title+' '+window.location.href))">WhatsApp</button>
-          <button class="share-btn share-copy" onclick="navigator.clipboard.writeText(window.location.href);this.textContent='✓ कपी भयो!'">🔗 लिंक कपी</button>
-        </div>
-      </div>
- 
-      <div class="related-section">
-        <div class="related-title">अझै पढ्नुहोस्</div>
-        <div class="related-grid">
-          <a href="article.html" class="related-card">
-            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80" alt="">
-            <div class="related-card-body">
-              <span class="related-tag" style="background:#F0FDF4;color:#166534">प्रविधि</span>
-              <div class="related-title-text">एआई चिप युद्ध के हो — र नेपाललाई किन फरक पर्छ?</div>
-              <div class="related-meta">८ मिनेट पढाइ</div>
-            </div>
-          </a>
-          <a href="article.html" class="related-card">
-            <img src="https://images.unsplash.com/photo-1570041475928-4483b26eb1ae?w=400&q=80" alt="">
-            <div class="related-card-body">
-              <span class="related-tag" style="background:#FEF2F2;color:#991B1B">नेपाल</span>
-              <div class="related-title-text">नेपालको जलविद्युत उछाल: तथ्य के हो, कथा के हो?</div>
-              <div class="related-meta">५ मिनेट पढाइ</div>
-            </div>
-          </a>
-        </div>
-      </div>
- 
+      </a>
     </div>
  
-    <!-- SIDEBAR -->
-    <div class="sidebar">
+    <div>
+      <!-- REPLACE WITH YOUR GOOGLE ADSENSE CODE -->
       <div class="sidebar-ad"><span>300 × 250 — Ad Space</span></div>
  
-      <div class="progress-box">
-        <div class="progress-label">📖 पढाइ प्रगति</div>
-        <div class="progress-bar-wrap"><div class="progress-bar" id="prog"></div></div>
-        <div class="progress-text" id="prog-text">लेखको ०% पढ्नुभयो</div>
-      </div>
- 
       <div class="sidebar-box">
-        <div class="sb-label">अन्य विषयहरू</div>
-        <a href="article.html" class="sb-topic">
-          <div class="sb-topic-inner">
-            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=200&q=80" alt="">
-            <div>
-              <span class="sb-topic-tag" style="background:#F0FDF4;color:#166534">प्रविधि</span>
-              <div class="sb-topic-title">एआई चिप युद्ध के हो?</div>
-              <div class="sb-topic-meta">८ मिनेट पढाइ</div>
-            </div>
-          </div>
-        </a>
-        <a href="article.html" class="sb-topic">
-          <div class="sb-topic-inner">
-            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=200&q=80" alt="">
-            <div>
-              <span class="sb-topic-tag" style="background:#EFF6FF;color:#1D4ED8">विश्व</span>
-              <div class="sb-topic-title">संयुक्त राष्ट्रसंघको जलवायु मतदान</div>
-              <div class="sb-topic-meta">६ मिनेट पढाइ</div>
-            </div>
-          </div>
-        </a>
+        <div class="sb-title">📊 एक नजरमा</div>
+        <div class="sb-stat-grid">
+          <div class="sb-stat"><div class="sb-stat-val">२</div><div class="sb-stat-lbl">विषयहरू</div></div>
+          <div class="sb-stat"><div class="sb-stat-val">निःशुल्क</div><div class="sb-stat-lbl">सधैं</div></div>
+        </div>
       </div>
  
-      <div class="sidebar-ad2"><span>300 × 200 — Ad Space</span></div>
+      <div class="about-card">
+        <div class="about-card-title">👤 यो साइटबारे</div>
+        <div class="about-card-text">यो एक <strong>व्यक्तिगत प्रयास</strong> हो — नेपालीहरूलाई सत्य र तथ्यका आधारमा जागरूक बनाउने सानो कदम। कुनै व्यावसायिक उद्देश्य छैन, केवल <strong>सही जानकारी फैलाउने</strong> इच्छा।</div>
+      </div>
  
       <div class="newsletter-card">
         <div class="nl-title">सूचित रहनुहोस्</div>
@@ -535,19 +290,33 @@ footer{background:#1a0505;color:#6B7280;padding:28px 0 16px;margin-top:48px}
         <button class="nl-btn">सूचना पठाउनुहोस्</button>
       </div>
     </div>
- 
   </div>
+ 
 </div>
  
 <footer>
   <div class="footer-inner">
-    <div class="f-brand-name"><span class="nepal">Nepal </span><span class="rest">Facts & Truths</span></div>
-    <div class="f-links">
-      <a href="index.html">गृहपृष्ठ</a>
-      <a href="mailto:your@email.com">सम्पर्क</a>
-      <a href="#">गोपनीयता नीति</a>
+    <div class="footer-top">
+      <div>
+        <div class="f-brand-name"><span class="nepal">Nepal </span><span class="rest">Facts & Truths</span></div>
+        <div class="f-desc">नेपालीहरूलाई सत्य र तथ्यका आधारमा जागरूक बनाउने एक व्यक्तिगत डिजिटल मञ्च।</div>
+        <div class="f-mission">"सत्य र तथ्यमा आधारित जागरण"</div>
+      </div>
+      <div class="f-col">
+        <h4>विषयहरू</h4>
+        <a href="#">नेपाल</a>
+        <a href="#">प्रविधि</a>
+      </div>
+      <div class="f-col">
+        <h4>सम्पर्क</h4>
+        <a href="mailto:susanadhikari001@gmail.com">सम्पर्क गर्नुहोस्</a>
+        <a href="#">गोपनीयता नीति</a>
+        <a href="#">विज्ञापन</a>
+      </div>
     </div>
-    <div class="f-copy">© <span id="year"></span> Nepal Facts & Truths — एक व्यक्तिगत प्रयास। सत्य र तथ्यमा आधारित जागरण।</div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Nepal Facts & Truths — एक व्यक्तिगत प्रयास। काठमाडौं, नेपाल।</span>
+    </div>
   </div>
 </footer>
  
@@ -594,3 +363,4 @@ document.addEventListener("DOMContentLoaded",function(){
 </body>
 </html>
  
+
